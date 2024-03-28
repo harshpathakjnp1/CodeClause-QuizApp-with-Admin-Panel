@@ -1,0 +1,285 @@
+body{
+    background-color:goldenrod !important;
+}
+table,
+thead,
+tr,
+tbody,
+th,
+td {
+  text-align: center;
+}
+#mainDiv{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#quiz, #panelInner{
+    width: 800px;
+    height: 400px;
+    background-color: #fff;
+    display: grid;
+    grid-template-rows: 60px auto;
+    border-radius: 30px;
+}
+#panelInner{
+    height: 650px;
+    width: 1200px;
+    grid-template-rows: 60px auto 62px;
+}
+#mainBody{
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+}
+#quizHeader, #header, #addBtnDiv{
+    height: 60px;
+    background-color:blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+} 
+#addBtnDiv{
+    height: 65px;
+    justify-content: center;
+    box-shadow: 0px -2px 5px 1px rgba(0, 0, 0, 0.3);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+#quizHeader{
+    width: 800px;
+}
+#header{
+    justify-content: center;
+}
+#quizBody{
+    background-color: rgb(211, 209, 209);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding: 10px 20px;
+}
+#questionsBody{
+    background-color: rgb(211, 209, 209);
+    padding: 10px 20px;
+    overflow-y: auto;
+}
+.option_group{
+    margin-left: 0px;
+    padding-left: 0px;
+}
+li{
+    list-style-type: none;
+}
+.option, .optionPanel{
+    border: 3px solid transparent;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 40px;
+    margin: 10px 10px 10px 0px;
+    background-color: white;
+    min-height: 42px;
+    transition: 500ms;
+}
+.option:hover{
+    cursor: pointer;
+    border: 3px solid rgb(130, 18, 182) !important;
+}
+.active{
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 40px;
+    margin: 10px 10px 10px 0px;
+    color: white;
+    background-color: rgb(130, 18, 182) !important;
+    border: 3px solid rgb(130, 18, 182) !important;
+    transition: 500ms;
+}
+.nxtBtn, .rstBtn{
+    background-color: rgb(130, 18, 182) !important;
+    border-radius: 50px !important;
+    padding: 15px !important;
+    transition: 500ms;
+    border: none !important;
+    float: right;
+}
+.startBtn, .adminBtn, .homeBtn{
+    font-size: xx-large !important;
+    border-radius: 80px !important;
+    padding: 50px !important;
+    border: none !important;
+    margin: 20px !important;
+    transition: 500ms;
+}
+.homeBtn{
+    /* background: none repeat scroll 0 0 #FF0000; */
+    /* border: medium none; */
+    /* color: #FFFFFF; */
+    /* height: 50px; */
+    left: 70%;
+    position: fixed;
+    top: 280px;
+    padding: 30px 50px !important;
+    /* width: 100px; */
+}
+.exitBtn{
+    border-radius: 50px !important;
+    width: 200px;
+    height: 100px;
+    margin-bottom: 20px;
+    font-size: xx-large !important;
+}
+/* .nxtBtn:active, .rstBtn:active, .startBtn:active{
+    box-shadow: black 0.3;
+    background-color: rgb(130, 18, 182) !important;
+    border-radius: 50px !important;
+    padding: 15px !important;
+    transition: 500ms;
+    border: none !important;
+} */
+/* .startBtn, $ad */
+.nxtBtn:focus, .homeBtn:focus,  .exitBtn:focus, .rstBtn:focus, .startBtn:focus, .adminBtn:focus{
+    outline: none !important;
+    box-shadow: none !important;
+}
+.nxtBtn:hover, .homeBtn:hover, .rstBtn:hover, .startBtn:hover, .exitBtn:hover, .adminBtn:hover{
+    background-color: white !important;
+    color: black !important;
+    transition: 500ms;
+}
+#timer{
+    color: white;
+    padding: 19px;
+    margin-right: -20px;
+    border-top-right-radius: 27px;
+    background-color: rgb(130, 18, 182);
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+/* ==================AdminPanel================ */
+
+#mainPanel{
+    min-width: 300px;
+    min-height: 850px;
+    justify-content: center;
+    align-items: center;
+    /* position: relative; */
+}
+/* #questionsBody{
+    min-height: 320px;
+    max-height: 320px;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    overflow-y: auto;
+} */
+.container{
+    min-width: 300px;
+    min-height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#greet{
+    color: rgb(160, 157, 157);
+}
+#header{
+    font-size: 20px;
+    /* margin: 5px 1px; */
+}
+
+/* #dateTime{
+    width: 350px;
+    height: 197px;
+    display: flex;
+    justify-content: center;
+}
+#dyDtTm{
+    color: white;
+    position: absolute;
+    width: 350px;
+    min-height: 197px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#day{
+    font-size: 25px;
+}
+#date{
+    font-size: 25px;
+}
+#time{
+    font-size: 35px;
+} */
+#delAllBtn, #addBtn{
+    padding: 15px 18px;
+    border-radius: 50%;
+    font-size: 30px;
+    margin: 1px 30px !important;
+}
+/* #addBtnDiv{
+    height: 62px;
+    display: flex;
+    justify-content: center;
+} */
+.panelLi{
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 42px;
+    align-items: center;
+    margin: 10px;
+}
+ul{
+    padding: 0px !important;
+    transition-delay: 2s;
+}
+p,.panelBtn,input{
+    margin:2px !important;
+}
+.liBtn, .liBtnAdd, .liBtnTAdd{
+    max-height: 50px;
+    font-size: 25px !important;
+    border-radius: 50% !important;
+    padding: 10px 12px !important;
+    margin: 0px 20px;
+}
+.liBtnAdd{
+    padding: 10px 13px !important;
+}
+.liBtnTAdd{
+    padding: 10px !important;
+}
+#questions{
+    margin-bottom: 0px !important;
+    background-color:darkcyan;
+    padding: 20px;
+    border-radius: 20px;
+    color: white;
+    max-width: 177px;
+    word-wrap: break-word;
+}
+
+.copyright{
+    color: whitesmoke;
+    font-family: monospace;
+    font-size: x-large;
+}
